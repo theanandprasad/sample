@@ -1,128 +1,120 @@
-{\rtf1\ansi\ansicpg1252\cocoartf2638
-\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
-{\colortbl;\red255\green255\blue255;}
-{\*\expandedcolortbl;;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
-\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample UI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        input[type="text"], input[type="range"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #218838;
+        }
+        .accordion {
+            background: #eee;
+            cursor: pointer;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 18px;
+            transition: background 0.4s;
+            margin-top: 10px;
+        }
+        .accordion:hover {
+            background: #ccc;
+        }
+        .panel {
+            padding: 0 18px;
+            background: white;
+            display: none;
+            overflow: hidden;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+    </style>
+</head>
+<body>
 
-\f0\fs24 \cf0 <!DOCTYPE html>\
-<html lang="en">\
-<head>\
-    <meta charset="UTF-8">\
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
-    <title>Sample UI</title>\
-    <style>\
-        body \{\
-            font-family: Arial, sans-serif;\
-            background-color: #f4f4f9;\
-            margin: 0;\
-            padding: 20px;\
-        \}\
-        .container \{\
-            max-width: 600px;\
-            margin: auto;\
-            background: #fff;\
-            padding: 20px;\
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);\
-            border-radius: 8px;\
-        \}\
-        h1 \{\
-            text-align: center;\
-            color: #333;\
-        \}\
-        input[type="text"], input[type="range"] \{\
-            width: 100%;\
-            padding: 10px;\
-            margin: 10px 0;\
-            border: 1px solid #ccc;\
-            border-radius: 4px;\
-        \}\
-        button \{\
-            width: 100%;\
-            padding: 10px;\
-            background: #28a745;\
-            color: white;\
-            border: none;\
-            border-radius: 4px;\
-            cursor: pointer;\
-            font-size: 16px;\
-        \}\
-        button:hover \{\
-            background: #218838;\
-        \}\
-        .accordion \{\
-            background: #eee;\
-            cursor: pointer;\
-            padding: 10px;\
-            width: 100%;\
-            border: none;\
-            text-align: left;\
-            outline: none;\
-            font-size: 18px;\
-            transition: background 0.4s;\
-            margin-top: 10px;\
-        \}\
-        .accordion:hover \{\
-            background: #ccc;\
-        \}\
-        .panel \{\
-            padding: 0 18px;\
-            background: white;\
-            display: none;\
-            overflow: hidden;\
-            border: 1px solid #ccc;\
-            border-top: none;\
-        \}\
-    </style>\
-</head>\
-<body>\
-\
-<div class="container">\
-    <h1>Sample UI</h1>\
-    \
-    <label for="textInput">Text Input:</label>\
-    <input type="text" id="textInput" placeholder="Enter text here">\
-\
-    <label for="rangeInput">Slider:</label>\
-    <input type="range" id="rangeInput" min="0" max="100">\
-\
-    <button id="submitButton">Submit</button>\
-\
-    <button class="accordion">Section 1</button>\
-    <div class="panel">\
-        <p>Content for section 1.</p>\
-    </div>\
-\
-    <button class="accordion">Section 2</button>\
-    <div class="panel">\
-        <p>Content for section 2.</p>\
-    </div>\
-\
-    <button class="accordion">Section 3</button>\
-    <div class="panel">\
-        <p>Content for section 3.</p>\
-    </div>\
-</div>\
-\
-<script>\
-    document.getElementById('submitButton').addEventListener('click', function() \{\
-        alert('Button clicked!');\
-    \});\
-\
-    var acc = document.getElementsByClassName('accordion');\
-    for (var i = 0; i < acc.length; i++) \{\
-        acc[i].addEventListener('click', function() \{\
-            this.classList.toggle('active');\
-            var panel = this.nextElementSibling;\
-            if (panel.style.display === 'block') \{\
-                panel.style.display = 'none';\
-            \} else \{\
-                panel.style.display = 'block';\
-            \}\
-        \});\
-    \}\
-</script>\
-\
-</body>\
-</html>\
-}
+<div class="container">
+    <h1>Sample UI</h1>
+    
+    <label for="textInput">Text Input:</label>
+    <input type="text" id="textInput" placeholder="Enter text here">
+
+    <label for="rangeInput">Slider:</label>
+    <input type="range" id="rangeInput" min="0" max="100">
+
+    <button id="submitButton">Submit</button>
+
+    <button class="accordion">Section 1</button>
+    <div class="panel">
+        <p>Content for section 1.</p>
+    </div>
+
+    <button class="accordion">Section 2</button>
+    <div class="panel">
+        <p>Content for section 2.</p>
+    </div>
+
+    <button class="accordion">Section 3</button>
+    <div class="panel">
+        <p>Content for section 3.</p>
+    </div>
+</div>
+
+<script>
+    document.getElementById('submitButton').addEventListener('click', function() {
+        alert('Button clicked!');
+    });
+
+    var acc = document.getElementsByClassName('accordion');
+    for (var i = 0; i < acc.length; i++) {
+        acc[i].addEventListener('click', function() {
+            this.classList.toggle('active');
+            var panel = this.nextElementSibling;
+            if (panel.style.display === 'block') {
+                panel.style.display = 'none';
+            } else {
+                panel.style.display = 'block';
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
